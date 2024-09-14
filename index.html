@@ -16,29 +16,44 @@
       <nav class="menu__nav">
         <ul class="menu__list">
           <li class="menu__item">Exhibitions</li>
-          <li class="menu__item">Gallery</li>
+          <li class="menu__item"><a href="#gallery">Gallery</a></li>
           <li class="menu__item">Events</li>
-          <li class="menu__item">Visit</li>
+          <li class="menu__item"><a href="#plan">Visit</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="exhibition">
-        <h1 class="exhibition__title">Welcome to the CosmoArte Museum</h1>
-        <p class="exhibition__subtitle">
-          Explore centuries of cosmic creativity through our vast collection of
-          universe-inspired masterpieces.
-        </p>
-        <div class="exhibition__buttons">
-          <button class="exhibition__button exhibition__button--plan">
-            Plan your visit
-          </button>
-          <button class="exhibition__button exhibition__button--gallery">
-            View Gallery
-          </button>
-        </div>
+      <section class="carousel">
+        <button class="carousel__control carousel__control--prev">←</button>
+        <section class="carousel__track">
+          <section class="exhibition exhibition__page1">
+            <h1 class="exhibition__title">Welcome to the CosmoArte Museum</h1>
+            <p class="exhibition__subtitle">
+              Explore centuries of cosmic creativity through our vast collection
+              of universe-inspired masterpieces.
+            </p>
+            <div class="exhibition__buttons"></div>
+          </section>
+          <section class="exhibition exhibition__page2">
+            <h1 class="exhibition__title">Welcome to the CosmoArte Museum</h1>
+            <p class="exhibition__subtitle">
+              Experience cosmic creativity at our event with a stunning array of
+              universe-inspired displays.
+            </p>
+            <div class="exhibition__buttons"></div>
+          </section>
+          <section class="exhibition exhibition__page3">
+            <h1 class="exhibition__title">Welcome to the CosmoArte Museum</h1>
+            <p class="exhibition__subtitle">
+              Join our event to explore interactive exhibits and art inspired by
+              the cosmos.
+            </p>
+            <div class="exhibition__buttons"></div>
+          </section>
+        </section>
+        <button class="carousel__control carousel__control--next">→</button>
       </section>
-      <h2 class="main__subtitle">Art Gallery</h2>
+      <h2 class="main__subtitle" id="gallery">Art Gallery</h2>
       <section class="gallery">
         <div class="gallery__card">
           <div class="gallery__card__picture gallery__card__picture--front">
@@ -155,7 +170,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section id="plan">
         <h2 class="main__subtitle">Plan your visit</h2>
         <section class="plan">
           <div class="plan__card">
@@ -190,6 +205,6 @@
         </ul>
       </div>
     </footer>
-    <script type="module" src="js/main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

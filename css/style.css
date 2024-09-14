@@ -9,6 +9,7 @@
 
 html{
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -30,6 +31,7 @@ body{
 .menu__nav{
     width: auto;
     height: 100%;
+
 }
 
 .menu__name{
@@ -53,6 +55,11 @@ body{
     transition: background-color .4s ease;
 }
 
+.menu__item a{
+    text-decoration: none;
+    color: black;
+}
+
 .menu__item:hover{
     background-color: var(--secundary-color);
     cursor: pointer;
@@ -60,18 +67,63 @@ body{
 
 /* Exhibitions */
 
-.exhibition{
+.carousel {
+    position: relative;
     width: 100%;
+    overflow: hidden;
+  }
+
+.carousel__track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+.carousel__control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px;
+  }
+
+.carousel__control--prev {
+    left: 10px;
+  }
+  
+.carousel__control--next {
+    right: 10px;
+  }
+
+.exhibition{
+    width: 100% !important;
     height: 500px;
-    background-image: url(../storage/img/poster.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     color: white;
+}
+
+.exhibition.active {
+    display: flex;
+  }
+
+.exhibition__page1{
+    background-image: url(../storage/img/poster.jpg);
+}
+.exhibition__page2{
+    background-image: url(../storage/img/poster2.jpg);
+}
+.exhibition__page3{
+    background-image: url(../storage/img/poster3.jpg);
 }
 
 .exhibition__title{
@@ -93,7 +145,6 @@ body{
     border-radius: 7px;
     padding: 1rem 1.5rem;
     font-size: clamp(1rem, 5vw, 1.3rem);
-    /* font-weight: 600; */
     transition: transform 0.2s ease;
 }
 
@@ -101,6 +152,11 @@ body{
     transform: scale(1.1);
     /* transform: translateY(-.25rem); */
     cursor: pointer;
+}
+
+.exhibition__button a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .exhibition__button--plan{

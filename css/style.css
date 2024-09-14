@@ -1,0 +1,231 @@
+
+@import url("variables.css");
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    /* font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal; */
+}
+
+.menu{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__nav{
+    width: auto;
+    height: 100%;
+}
+
+.menu__name{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    column-gap: 30px;
+    font-size: clamp(1rem, 5vw, 1.3rem);
+}
+
+.menu__item{
+    padding: 7px 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: background-color .4s ease;
+}
+
+.menu__item:hover{
+    background-color: var(--secundary-color);
+    cursor: pointer;
+}
+
+/* Exhibitions */
+
+.exhibition{
+    width: 100%;
+    height: 500px;
+    background-image: url(../storage/img/poster.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.exhibition__title{
+    font-size: clamp(1.8rem, 5vw, 3.2rem);
+}
+
+.exhibition__subtitle{
+    font-size: clamp(1rem, 5vw, 1.6rem);
+}
+
+.exhibition__buttons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.exhibition__button{
+    border: none;
+    border-radius: 7px;
+    padding: 1rem 1.5rem;
+    font-size: clamp(1rem, 5vw, 1.3rem);
+    /* font-weight: 600; */
+    transition: transform 0.2s ease;
+}
+
+.exhibition__button:hover{
+    transform: scale(1.1);
+    /* transform: translateY(-.25rem); */
+    cursor: pointer;
+}
+
+.exhibition__button--plan{
+    background-color: white;
+}
+
+.exhibition__button--gallery{
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    color: white;
+}
+
+.main__subtitle{
+    text-align: center;
+    padding: 50px 0;
+    font-size: clamp(1.2rem, 5vw, 1.7rem);
+    font-weight: 400;
+}
+
+/* Gallery */
+
+.gallery{
+    background-color: var(--secundary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+
+.gallery__card{
+    position: relative;
+    width: 350px;
+    height: 450px;
+}
+
+.gallery__card__picture{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.gallery__card__picture--front{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.gallery__card__picture--front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__card__picture--back{
+    transform: perspective(600px) rotateY(180deg);
+    background-color: black;
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align:  center;
+}
+
+.gallery__card:hover .gallery__card__picture--front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.gallery__card:hover .gallery__card__picture--back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* Plan your visit */
+
+.plan{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    margin-bottom: 50px;
+}
+
+.plan__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 8px;
+}
+
+.bx{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.plan__card__title{
+    font-weight: 600;
+}
+
+/* Footer */
+
+footer{
+    height: 10vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer__info{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    column-gap: 20px;
+}

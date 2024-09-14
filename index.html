@@ -5,66 +5,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galeria de arte</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <section>Name of museum</section>
-      <nav>
-        <ul>
-          <li>exhibitions</li>
-          <li>Gallery</li>
-          <li>Events</li>
-          <li>Visit</li>
+    <header class="menu">
+      <section class="menu__name">Name of museum</section>
+      <nav class="menu__nav">
+        <ul class="menu__list">
+          <li class="menu__item">Exhibitions</li>
+          <li class="menu__item">Gallery</li>
+          <li class="menu__item">Events</li>
+          <li class="menu__item">Visit</li>
         </ul>
       </nav>
     </header>
     <main>
-      <section>
-        <h1>Welcome to the Acme Museum Art</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div>
-          <button>Plan your visit</button>
-          <button>View Gallery</button>
+      <section class="exhibition">
+        <h1 class="exhibition__title">Welcome to the Acme Museum Art</h1>
+        <p class="exhibition__subtitle">
+          Explore centuries of creativity and human expression through our vas
+          colletions of masterpieces.
+        </p>
+        <div class="exhibition__buttons">
+          <button class="exhibition__button exhibition__button--plan">
+            Plan your visit
+          </button>
+          <button class="exhibition__button exhibition__button--gallery">
+            View Gallery
+          </button>
+        </div>
+      </section>
+      <h2 class="main__subtitle">Art Gallery</h2>
+      <section class="gallery">
+        <div class="gallery__card">
+          <div class="gallery__card__picture gallery__card__picture--front">
+            <img src="storage/img/saturn.jpg" alt="Saturn" />
+          </div>
+          <div class="gallery__card__picture gallery__card__picture--back">
+            <h3>Saturn</h3>
+            <br />
+            <p>
+              Con sus impresionantes anillos, Saturno es a menudo considerado el
+              planeta más bello. Sus anillos, compuestos de hielo y roca, lo
+              hacen visualmente espectacular.
+            </p>
+          </div>
+        </div>
+        <div class="gallery__card">
+          <div class="gallery__card__picture gallery__card__picture--front">
+            <img src="storage/img/jupiter.jpg" alt="Jupiter" />
+          </div>
+          <div class="gallery__card__picture gallery__card__picture--back">
+            <h3>Júpiter</h3>
+            <p>
+              Júpiter tiene una apariencia única gracias a sus bandas de nubes
+              de colores y la Gran Mancha Roja. Su tamaño masivo y sus
+              características atmosféricas lo hacen un espectáculo visual.
+            </p>
+          </div>
+        </div>
+        <div class="gallery__card">
+          <div class="gallery__card__picture gallery__card__picture--front">
+            <img src="storage/img/neptune.jpg" alt="Picture" />
+          </div>
+          <div class="gallery__card__picture gallery__card__picture--back">
+            <h3>Neptuno</h3>
+            <p>
+              Neptuno es conocido por su intenso color azul debido a su
+              atmósfera rica en metano. La profundidad y la vibrante tonalidad
+              de su azul lo hacen atractivo.
+            </p>
+          </div>
+        </div>
+        <div class="gallery__card">
+          <div class="gallery__card__picture gallery__card__picture--front">
+            <img src="storage/img/uranus.jpg" alt="Picture" />
+          </div>
+          <div class="gallery__card__picture gallery__card__picture--back">
+            <h3>Urano</h3>
+            <p>
+              Urano tiene un color azul verdoso debido a su atmósfera rica en
+              metano. Además, su inclinación extrema en el eje de rotación lo
+              hace interesante y único.
+            </p>
+          </div>
+        </div>
+        <div class="gallery__card">
+          <div class="gallery__card__picture gallery__card__picture--front">
+            <img src="storage/img/mars.jpg" alt="Picture" />
+          </div>
+          <div class="gallery__card__picture gallery__card__picture--back">
+            <h3>Marte</h3>
+            <p>
+              Marte, conocido como el Planeta Rojo, tiene una apariencia
+              distintiva con su color rojo característico, que proviene de
+              óxidos de hierro en su superficie.
+            </p>
+          </div>
+        </div>
+        <div class="gallery__card">
+          <div class="gallery__card__picture gallery__card__picture--front">
+            <img src="storage/img/venus.jpg" alt="Picture" />
+          </div>
+          <div class="gallery__card__picture gallery__card__picture--back">
+            <h3>Venus</h3>
+            <p>
+              Venus tiene una atmósfera densa y nublada que le da un color
+              amarillo pálido. Aunque su superficie es opaca y no visible desde
+              el espacio, su atmósfera crea un efecto de brillo interesante.
+            </p>
+          </div>
+        </div>
+        <div class="gallery__card">
+          <div class="gallery__card__picture gallery__card__picture--front">
+            <img src="storage/img/mercury.jpg" alt="Picture" />
+          </div>
+          <div class="gallery__card__picture gallery__card__picture--back">
+            <h3>Mercurio</h3>
+            <p>
+              Mercurio tiene una superficie cubierta de cráteres y una
+              apariencia grisácea, menos llamativa en comparación con los otros
+              planetas. A pesar de esto, su proximidad al Sol y su superficie
+              rocosa le dan un carácter propio.
+            </p>
+          </div>
+        </div>
+        <div class="gallery__card">
+          <div class="gallery__card__picture gallery__card__picture--front">
+            <img src="storage/img/earth.jpg" alt="Picture" />
+          </div>
+          <div class="gallery__card__picture gallery__card__picture--back">
+            <h3>Tierra</h3>
+            <p>
+              La Tierra es hermosa desde el espacio debido a sus océanos azules
+              y continentes verdes, pero en una lista de planetas basados en su
+              apariencia desde el espacio exterior, puede no destacar tanto como
+              algunos de los planetas más coloridos y con características
+              únicas.
+            </p>
+          </div>
         </div>
       </section>
       <section>
-        <h2>Art Gallery</h2>
-        <article>
-          <img src="" alt="img gallery" />
-          <div>text</div>
-        </article>
-      </section>
-      <section>
-        <h2>Plan your visit</h2>
-        <section>
-          <div>
-            <span>icon</span>
-            <h3>Opening hours</h3>
+        <h2 class="main__subtitle">Plan your visit</h2>
+        <section class="plan">
+          <div class="plan__card">
+            <i class='bx bx-time-five'></i>
+            <h3 class="plan__card__title">Opening hours</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, harum.
+                Tuesday - Sunday 10am - 5pm
             </p>
+            <p>Close on Monday</p>
           </div>
-          <div>
-            <span>icon</span>
-            <h3>Opening hours</h3>
+          <div class="plan__card">
+            <i class='bx bx-map'></i>
+            <h3 class="plan__card__title">Location</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, harum.
+                123 Art Street
             </p>
+            <p>Cityville, Street 7777</p>
           </div>
-          <div>
-            <span>icon</span>
-            <h3>Opening hours</h3>
+          <div class="plan__card">
+            <i class='bx bx-image-alt'></i>
+            <h3 class="plan__card__title">Curren Exhibition</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae, harum.
+              Solar System
             </p>
+            <p>Until September 30, 2024</p>
           </div>
         </section>
       </section>
     </main>
-    <footer>Lorem ipsum dolor sit amet consectetur.</footer>
+    <footer>
+        <div><p>&copy; 2024 Alexis Chacón. Todos los derechos reservados.</p></div>
+        <div>
+            <ul class="footer__info">
+                <li>Terms of Service</li>
+                <li>Privacy</li>
+            </ul>
+        </div>
+    </footer>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>

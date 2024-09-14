@@ -181,6 +181,11 @@ body{
     transform: perspective(600px) rotateY(360deg);
 }
 
+.gallery__card__description{
+    font-weight: 200;
+    text-align: justify;
+}
+
 /* Plan your visit */
 
 .plan{
@@ -188,7 +193,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 80px;
+    padding: 0 100px;
     margin-bottom: 50px;
 }
 

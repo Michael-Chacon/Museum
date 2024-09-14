@@ -42,3 +42,16 @@ buttos.forEach(e => {
   </button>
 `;
 })
+
+// Menu responsivo
+
+let menu = document.querySelector(".menu__list");
+document.querySelector(".btnMenu").addEventListener("click", function () {
+  menu.classList.toggle("active");
+  console.log("vivo");
+});
+
+document.querySelector(".menu__list").addEventListener("click", function () {
+  menu.classList.remove("active");
+  console.log("tal");
+});
